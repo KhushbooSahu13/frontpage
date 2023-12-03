@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Poppins",sans-serif;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+html,
+body{
+    width: 100%;
+    height: 100%;
+   background-color: black;
+}
+
+
+header{
+    position: fixed;
+    width:100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    transition: 0.5s;
+}
+header i{
+    font-size: 25px;
+    color: red;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 50px;
+    text-decoration: none;
+}
+#nav-part2 h5{
+    position: relative;
+    font-size: 15px;
+}
+#nav-part2 a{
+    text-decoration: none;
+}
+ #nav-part2 a::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s all linear;
+}
+#nav-part2 a:hover::after,
+#nav-part2 .home-active::after{
+    width: 100%;
+}
+ button{
+   padding: 0.7rem 1.4rem;
+   /* color: white; */
+   border-radius: 0.7rem;
+   background-color: red;
+}
+button:hover{
+    color: rgb(247, 10, 10);
+    background-color: rgb(248, 248, 248);
+}
+
+.page1{
+    height: 100%;
+    width: 100vw;
+    /* background-color: goldenrod; */
+    position: relative;
+}
+.df{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-container{
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+    
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(225, 234, 234);
+    display: flex;
+    overflow-x: auto;
+    cursor: pointer;
+    position: relative;
+}
+.slider::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 41, 41);
+    border-radius: 20px;
+    flex-shrink: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card img{
+   
+    width: 100%;
+    height: 100%;
+}
+.btn{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(231, 222, 222, 0.404);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+   font-size: 5px;
+}
+.prev-btn{
+    z-index: 1;
+    left: 1%;
+   font-size: 20px;
+}
+.next-btn{
+    z-index: 1;
+    right: 1%;
+    font-size: 20px;
+}
+.home-text{
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    padding: 0 150px;
+}
+.home-text h5{
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+ .home-text h1{
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#play i{
+    position: absolute;
+    top: 140%;
+    right: -50%;
+    background-color: rgba(255, 255, 255, 0.233);
+    padding: 6px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.267); 
+     color: red;
+     font-size: 30px;
+}
+#play i:hover{
+    background-color: red;
+    color: white;
+    transition: 0.2s all ease;
+}
+.heading{
+    margin-top: 4rem;
+
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid red;
+}
+
+.movies-container{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+.box .box-img{
+    width: 100%;
+    height: 270px;
+}
+.box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box .box-img img:hover{
+    transform: translateY(-10px);
+    transition: 0.2s all linear;
+}
+.box h3{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.box span{
+    font-size: 13px;
+}
+section{
+    padding: 4.5rem 0.1 rem;
+    margin-left: 7rem;
+    margin-right: 10rem;
+}
+.coming-container{
+    white-space: nowrap;
+    /* padding-left: 90%; */
+    overflow-x: auto;
+    padding: 4rem;
+    
+
+}
+.column-box{
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+/* .column-box::-webkit-scrollbar{
+    display: inline-block;
+} */
+.column-box .box-img{
+    width: 180px;
+    height: 270px; 
+    
+}  
+.column-box h3{
+    font-size:1rem;
+    font-weight: 500;
+}
+.column-box span{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.column-box .box-img img{
+    width: 100%;
+    height: 100%;
+}
+.column-box .box-img img:hover{
+    transform: translateY(-10px);
+    transition: 0.2s all linear;
+}
+*::-webkit-scrollbar{
+    background: linear-gradient(black, white,black);
+}
+*::-webkit-scrollbar-thumb{
+    background:linear-gradient(black, white ,black);
+}
+.newsletter{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+}
+.newsletter h2{
+    text-align: center;
+    margin-top: 2rem;
+}
+.newsletter form {
+    background-color: white;
+    padding: 10px;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+.newsletter form input{
+    border: none;
+    outline: none;
+    color: black;
+}
+.footer{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.social{
+   
+display: flex;
+align-items: center;
+gap: 0.3rem;
+}
+.footer i{
+    background-color: white;
+    padding: 2px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: red;
+}
+.footer i:hover{
+    color: white;
+    background-color: red;
+    
+}
+
+.copyright{
+    padding: 20px;
+    text-align: center;
+    margin-top: 3rem;
+}
+#res{
+    opacity: 0;
+}
+@media (max-width:500px) {
+    header #nav-part2{
+          opacity: 0;
+    }
+    header #nav-part3{
+        opacity: 0;
+  }
+  header #res{
+    opacity: 1;
+    margin-left: 85%;
+  }
+  .home-text h1{
+    font-size: 35px;
+  } 
+}
